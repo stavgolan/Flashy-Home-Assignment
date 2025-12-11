@@ -108,10 +108,10 @@ DB_DATABASE=./database/database.sqlite
    `Content-Type: application/json`
 
     Body:
-    <pre>{
-    "target_url": "https://google.com",
-    "slug": "optional-custom-slug"
-    }</pre>
+      <pre>{
+      "target_url": "https://google.com",
+      "slug": "optional-custom-slug"
+      }</pre>
 
     Curl:  
      `curl -X POST http://localhost:8000/api/links \`  
@@ -119,11 +119,11 @@ DB_DATABASE=./database/database.sqlite
      `-d "target_url=https://google.com"`
 
     Response:
-    <pre>{
-    "slug": "Ab12Cd",
-    "target_url": "https://google.com",
-    "is_active": true
-    }</pre>
+      <pre>{
+      "slug": "Ab12Cd",
+      "target_url": "https://google.com",
+      "is_active": true
+      }</pre>
 
 2. **Redirect: GET /r/{slug}**  
    Example:  
@@ -141,15 +141,15 @@ DB_DATABASE=./database/database.sqlite
    `-H "X-Api-Key: secret123"`
 
     Response:
-      <pre>{
-      "slug": "Ab12Cd",
-      "target_url": "https://google.com",
-      "total_hits": 3,
-      "last_hits": [
-      { "ip": "127.0.0.\*", "created_at": "2025-12-09T10:00:00" },
-      { "ip": "127.0.0.\*", "created_at": "2025-12-09T10:00:01" }
-      ]
-      }</pre>
+    <pre>{
+    "slug": "Ab12Cd",
+    "target_url": "https://google.com",
+    "total_hits": 3,
+    "last_hits": [
+    { "ip": "127.0.0.\*", "created_at": "2025-12-09T10:00:00" },
+    { "ip": "127.0.0.\*", "created_at": "2025-12-09T10:00:01" }
+    ]
+    }</pre>
 
 # Architecture Explanation
 
@@ -199,3 +199,5 @@ Total estimated time: ~7–8 hours
 (including coding, debugging, queue setup, cache, events, and test coverage)
 
 # Video Demo (Instructions)
+
+Video link: https://www.loom.com/share/d0cc1f4c414a46d6a6825d826d597342
